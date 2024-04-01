@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ms-cliente-service
+  profiles:
+    active: development
+  config:
+    import: optional:configserver:http://root:123456@localhost:7070
+  datasource:
+    url: jdbc:mysql://localhost:3306/ms-cliente
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
