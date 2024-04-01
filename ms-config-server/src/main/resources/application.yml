@@ -10,7 +10,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/eberthrosales # ruta del repositorio git
+          uri: https://github.com/eberthrosales/DIST-2024.git # ruta del repositorio git
           searchPaths: config-data
           #username:
           #password:
