@@ -23,6 +23,6 @@ spring:
           enable: true
       routes:
         - id: ms-catalogo-service
-          uri: lb://ms-catalogo-service
+          uri: lb://ms-catalogo-server
           predicates:
             - Path=/categoria/**
