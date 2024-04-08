@@ -1,6 +1,6 @@
 package com.example.mscliente.service.impl;
 
-import com.example.mscliente.repository.entity.Cliente;
+import com.example.mscliente.entity.Cliente;
 import com.example.mscliente.repository.ClienteRepository;
 
 import com.example.mscliente.service.ClienteService;

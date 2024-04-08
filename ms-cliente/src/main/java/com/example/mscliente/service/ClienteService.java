@@ -1,6 +1,6 @@
 package com.example.mscliente.service;
 
-import com.example.mscliente.repository.entity.Cliente;
+import com.example.mscliente.entity.Cliente;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
