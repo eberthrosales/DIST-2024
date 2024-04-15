@@ -1,5 +1,6 @@
 package com.example.mspedido.entity;
 
+import com.example.mspedido.dto.ClienteDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -14,7 +15,7 @@ public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String cliente;
+    private Integer clienteid;
     private LocalDate fecha;
     private String estado;
     private BigDecimal total;
@@ -25,5 +26,7 @@ public class Pedido {
     @JoinColumn(name = "venta_id")
     private List<PedidoDetalle> detalle;
 
+    @Transient
+    private ClienteDto clienteDto ;
 
 }
