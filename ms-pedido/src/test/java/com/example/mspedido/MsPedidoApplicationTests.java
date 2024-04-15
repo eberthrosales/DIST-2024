@@ -1,10 +1,10 @@
-package com.example.msregistryserver;
+package com.example.mspedido;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsRegistryServerApplicationTests {
+class MsPedidoApplicationTests {
 
 	@Test
 	void contextLoads() {
