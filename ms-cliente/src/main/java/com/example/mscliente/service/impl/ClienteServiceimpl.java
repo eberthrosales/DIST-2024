@@ -28,6 +28,7 @@ public class ClienteServiceimpl implements ClienteService {
 
     @Override
     public Optional<Cliente> buscarPorId(Integer id) {
+        System.out.println(id);
         return clienteRepository.findById(id);
     }
 
