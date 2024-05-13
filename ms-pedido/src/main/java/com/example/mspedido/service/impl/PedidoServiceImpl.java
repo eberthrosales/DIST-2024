@@ -28,14 +28,14 @@ public class PedidoServiceImpl implements PedidoService {
 
     @Override
     public Pedido guardar(Pedido pedido) {
-
+        
         return pedidoRepository.save(pedido);
     }
 
     @Override
     public Optional<Pedido> buscarPorId(Integer id) {
         Optional<Pedido> pedido = pedidoRepository.findById(id);
-        ClienteDto clienteDto = clienteFeign.productoBuscarPorId(pedido.get().getClienteid()).getBody();
+        ClienteDto clienteDto = clienteFeign.buscarPorId(pedido.get().getClienteid()).getBody();
        List<PedidoDetalle> pedidoDetalles = pedido.get().getDetalle().stream().map(pedidoDetalle -> {
            pedidoDetalle.setProductoDto(catalogoFeign.productoBuscarPorId(pedidoDetalle.getProductoId()).getBody());
            return pedidoDetalle;
